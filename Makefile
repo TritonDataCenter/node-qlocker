@@ -18,16 +18,12 @@ JSSTYLE_FLAGS =	-f $(TOOLS)/jsstyle.conf -o indent=4
 
 JS_FILES := index.js $(shell find lib test -name '*.js')
 
-# v8plus needs a little help
-NPM_MAKE_OVERRIDES =	CTFCONVERT=/bin/true CTFMERGE=/bin/true
-NPM_MAKE_OVERRIDES +=	LIBS=-luv LIBS+=-lnvpair
-
 all: build check test
 test: install
 
 .PHONY: build install test
 build install test:
-	MAKE_OVERRIDES="$(NPM_MAKE_OVERRIDES)" $(NPM) $@
+	$(NPM) $@
 
 .PHONY: check
 check: $(TOOLS) $(JSL) $(JSSTYLE)
