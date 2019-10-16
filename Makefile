@@ -16,7 +16,7 @@ JSL_FLAGS =	--conf=$(TOOLS)/jsl.node.conf
 JSSTYLE =	deps/jsstyle/jsstyle
 JSSTYLE_FLAGS =	-f $(TOOLS)/jsstyle.conf -o indent=4
 
-JS_FILES := $(shell find lib test -name '*.js')
+JS_FILES := index.js $(shell find lib test -name '*.js')
 
 # v8plus needs a little help
 NPM_MAKE_OVERRIDES =	CTFCONVERT=/bin/true CTFMERGE=/bin/true
