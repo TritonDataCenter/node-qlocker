@@ -59,16 +59,23 @@ qlocker.lock(path, function lock_cb(err, unlocker) {
 
 ## Development
 
-### Building
+### Build and sanity check with make
 
-The following works only on illumos and related operating systems.
+Any commits to this repo must comply with Joyent's style and lint requirements
+as well as have all unit tests passing.  The easiest way to test all of these is
+with:
 
 ```
-$ MAKE_OVERRIDES="CTFCONVERT=/bin/true CTFMERGE=/bin/true LIBS=-luv LIBS+=-lnvpair" \
-  npm install
+$ make
 ```
 
-### Test
+### Build with npm
+
+```
+$ npm install
+```
+
+### Test with npm
 
 ```
 npm test
