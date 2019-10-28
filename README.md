@@ -78,7 +78,7 @@ $ npm install
 ### Test with npm
 
 ```
-npm test
+$ npm test
 ```
 
 ## License
