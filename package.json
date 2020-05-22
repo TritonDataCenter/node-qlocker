@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/joyent/node-qlocker#README.md",
   "dependencies": {
-    "fs-ext": "1.3.0"
+    "fs-ext": "git://github.com/joyent/node-fs-ext.git#node-0.10"
   },
   "devDependencies": {
     "tap": "12.7.0",
